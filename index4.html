@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: burlywood;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .contact-section {
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            background: #fafafa;
+            position: relative;
+        }
+        .contact-container {
+            max-width: 800px;
+            width: 100%;
+        }
+        .form {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+        .inputBox {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .inputBox label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .inputBox input, .inputBox select {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            outline: none;
+            transition: border 0.3s;
+        }
+        .inputBox input:focus, .inputBox select:focus {
+            border-color: #C06B3E;
+        }
+        input[type="submit"] {
+            background: #C06B3E;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            font-size: 1.2rem;
+        }
+        input[type="submit"]:hover {
+            background: #a5552c;
+            transform: scale(1.1);
+        }
+        .social-icons {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #C06B3E;
+            font-size: 2rem;
+            transition: transform 0.3s;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+        .ice-cream {
+            position: fixed;
+            top: -100px;
+            left: 50%;
+            animation: fall 8s linear infinite;
+            font-size: 2rem;
+            z-index: 100;
+        }
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0); left: 10%; }
+            100% { transform: translateY(100vh) rotate(360deg); left: 80%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-section">
+        <div class="contact-container">
+            <div class="ice-cream">&#127848;</div>
+                <div class="inputBox">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="inputBox">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="inputBox">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" placeholder="Enter your address" required>
+                </div>
+                <div class="inputBox">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="inputBox">
+                    <label for="order">Order</label>
+                    <select id="order" required>
+                        <option value="">Select a product</option>
+                        <option value="product1">Product 1</option>
+                        <option value="product2">Product 2</option>
+                        <option value="product3">Product 3</option>
+                    </select>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
